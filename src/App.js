@@ -29,7 +29,7 @@ class App extends Component{
        <Particles className='particles' params={{
 	    "particles": {
 	        "number": {
-	            "value": 200,
+	            "value": 250,
 	            "density": {
 	                "enable": false
 	            }
