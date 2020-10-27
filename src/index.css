@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, rgba(247,249,249,1) 19%, rgba(43,42,42,1) 100%, rgba(180,212,227,1) 100%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
+    monospace;
+}
+
+.center{
+  display:flex;
+}

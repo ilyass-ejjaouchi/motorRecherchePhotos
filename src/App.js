@@ -1,0 +1,48 @@
+import React, { Component } from 'react';
+import Searchform from './Searchform/Searchform' ;
+import './App.css';
+import Particles from 'react-particles-js';
+import { connect } from 'react-redux';
+import {setSearchFiled,requestPictures} from './Searchform/Searchform.action';
+ 
+const mapStateToProps = state =>{
+  return {
+    inputFiled: state.searchPictures.inputFiled,
+    photos: state.RequestPictures.photos
+  }
+}
+const mapDispatchToProps = (dispatch) =>{
+  return {
+      onSearchChange: (event) => dispatch(setSearchFiled(event.target.value)),
+      onButtonSubmit:(key) => dispatch(requestPictures(key))
+  }
+}
+
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 100,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    }
+  }
+}
+class App extends Component{
+  constructor(){
+    super();
+  }
+
+  render(){
+     return (
+    <div className="App">
+       <Particles className='particles' params={particlesOptions} />
+        <Searchform onInputChange={this.props.onSearchChange} onButtonSubmit={this.props.onButtonSubmit}/>
+    </div>
+  );
+  }
+ 
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);
