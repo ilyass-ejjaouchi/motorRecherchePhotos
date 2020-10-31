@@ -12,10 +12,9 @@ export const setSearchFiled = (text)=> {
     }
 }
 
-export const requestPictures = (p) => (dispatch)=>{
-    console.log(p);
+export const requestPictures = (key) => (dispatch)=>{
     dispatch({type:REQUEST_PICTURES_PENDING});
-    fetch("https://pixabay.com/api/?key=18739075-8840b55cd2f755b50c01e67ae&q=casablanca").then(
+    fetch(`https://pixabay.com/api/?key=18739075-8840b55cd2f755b50c01e67ae&q=${key}`).then(
         response => response.json()
     ).then(
        data =>{
