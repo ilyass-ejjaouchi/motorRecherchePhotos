@@ -9,6 +9,7 @@ const CardList = ({ photos }) => {
                     {
                     photos.map((photo, i) => {
                         return (
+                        <div className="fl w-100 w-25-ns pa2">
                             <Card 
                             key={i} 
                             tags={photo.tags} 
@@ -17,6 +18,7 @@ const CardList = ({ photos }) => {
                             likes={photo.likes}
                             comments={photo.comments}
                             />
+                        </div>
                         );
                     })
                     }

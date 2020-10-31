@@ -7,7 +7,7 @@ const Card = ({tags,previewURL,imageURL,likes,comments}) => {
             <img class="ui avatar image" alt="image1" src={previewURL}/> {tags}
         </div>
         <div class="image">
-            <img alt="image2" src={imageURL}/>
+            <img alt="image2" src={imageURL} className="imageCenter"/>
         </div>
         <div class="content">
             <span class="right floated">
